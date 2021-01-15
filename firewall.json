@@ -1,0 +1,32 @@
+{
+  "resource": [
+    {
+      "google_compute_firewall": [
+        {
+          "default": [
+            {
+              "allow": [
+                {
+                  "protocol": "icmp"
+                },
+                {
+                  "ports": [
+                    "80",
+                    "8080",
+                    "1000-2000"
+                  ],
+                  "protocol": "tcp"
+                }
+              ],
+              "name": "test-firewall",
+              "network": "google_compute_network.cloud_ui_poc_network.name",
+              "source_tags": [
+                "web"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
